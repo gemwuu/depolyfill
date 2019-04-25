@@ -1,0 +1,14 @@
+<script>
+if (Array.prototype.findIndex) {
+  delete Array.prototype.findIndex;
+} else {
+  console.info('feature not supported.');
+}
+
+
+try {
+  [].findIndex(item => true);
+} catch (e) {
+  throw new Error(e)
+}
+</script>
