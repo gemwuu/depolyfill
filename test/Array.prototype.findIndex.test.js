@@ -1,5 +1,2 @@
-try {
-  [].findIndex(item => true);
-} catch (e) {
-  throw e
-}
+[].findIndex(item => true);
+

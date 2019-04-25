@@ -21,7 +21,7 @@ fs.readdir(
         const featFile = fs.readFileSync(`${featDir}${file.name.replace('.test', '')}`, 'utf8');
         const testFile = fs.readFileSync(`${testDir}${file.name}`, 'utf8');
 
-        fs.writeFile(testPageFile, `<script>\n${featFile}\n${testFile}</script>`, () => {
+        fs.writeFile(testPageFile, `<script>\n${featFile}\n${testFile}</script>\n`, () => {
           puppeteer.launch().then(async browser => {
             const page = await browser.newPage();
             page.on('pageerror', err => {
